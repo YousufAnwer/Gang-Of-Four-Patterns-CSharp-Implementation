@@ -35,6 +35,10 @@ namespace GOF.FactoryPattern
 			Console.WriteLine("Name: {0}, Model: {1}, Price: {2}", Name, Model, Price);
 		}
 	}
+
+	/// <summary>
+	/// Implement null OPbject Patters
+	/// </summary>
 	public class NullDevice : IDevice
 	{
 		private static NullDevice _instance;
@@ -132,6 +136,9 @@ namespace GOF.FactoryPattern
 			Console.WriteLine("Name: {0}, Price: {1},\nDetails: {2}", Name, Price, Details);
 		}
 	}
+	/// <summary>
+	/// Implement null OPbject Patters
+	/// </summary>
 	public class NullCable : ICable
 	{
 		private static NullCable _instanse;
