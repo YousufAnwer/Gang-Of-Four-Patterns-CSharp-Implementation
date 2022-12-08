@@ -1,5 +1,6 @@
 ﻿using GOF.AbstractFactory;
 using GOF.FactoryPattern;
+using GOF.second;
 using System;
 
 namespace Caller
@@ -9,7 +10,7 @@ namespace Caller
 		static void Main(string[] args)
 		{
 			//TestFactory();
-			TestAbstractfactory();
+			//TestAbstractfactory();
 
 		}
 		private static void TestFactory()
@@ -27,7 +28,7 @@ namespace Caller
 		private static void TestAbstractfactory()
 		{
 			IMegaFactory megaFactory = new MegaFactory();
-
+			
 			IDeviceFactory deviceFactory = megaFactory.CreateDeviceFactory();
 			IDevice device = deviceFactory.CreateDevice(DeviceName.Laptop);
 			device.Price = "2000$";
