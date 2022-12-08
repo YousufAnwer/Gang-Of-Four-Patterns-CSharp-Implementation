@@ -1,6 +1,10 @@
 ﻿using GOF.AbstractFactory;
 using GOF.AdapterPattern.Adapter;
 using GOF.AdapterPattern.ExternalSystem;
+using GOF.AdapterPatternSocket.Adapter;
+using GOF.AdapterPatternSocket.Charger;
+using GOF.AdapterPatternSocket.Devices;
+using GOF.AdapterPatternSocket.Sockets;
 using GOF.FactoryPattern;
 using System;
 
@@ -12,8 +16,8 @@ namespace Caller
 		{
 			//TestFactory();
 			//TestAbstractfactory();
-			TestAdapterPattern();
-
+			//TestAdapterPattern();
+			TestSocketAdapter();
 		}
 		private static void TestFactory()
 		{
@@ -52,6 +56,22 @@ namespace Caller
 			Console.WriteLine(country.Inhabitance);
 
 
+		}
+
+		private static void TestSocketAdapter()
+		{
+			I3PinCharger threePinCharger = new ThreePinCharger();
+			I2PinCharger twoPinCharger = new TwoPinCharger();
+			
+			MacBookPro mac =new MacBookPro();
+			mac.AttachCharger(threePinCharger);
+
+			IChargingAdapter adapter = new ChargingAdapter();
+			var twoPinCharger1=adapter.Addept(threePinCharger);
+
+
+			Socket twoPinSocket=new Socket();
+			twoPinSocket.PlugInCharger(twoPinCharger1);
 		}
 	}
 }
