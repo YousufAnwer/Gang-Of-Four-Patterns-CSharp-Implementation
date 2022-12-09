@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GOF.AdapterPattern", "GOF.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GOF.AdapterPatternSocket", "GOF.AdapterPatternSocket\GOF.AdapterPatternSocket.csproj", "{5080AAE9-4A3C-4A56-8115-67AD0F9A4B32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GOF.BuilderPattern", "GOF.BuilderPattern\GOF.BuilderPattern.csproj", "{1289A72E-9507-4AC6-9B7B-F338777623F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{5080AAE9-4A3C-4A56-8115-67AD0F9A4B32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5080AAE9-4A3C-4A56-8115-67AD0F9A4B32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5080AAE9-4A3C-4A56-8115-67AD0F9A4B32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1289A72E-9507-4AC6-9B7B-F338777623F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1289A72E-9507-4AC6-9B7B-F338777623F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1289A72E-9507-4AC6-9B7B-F338777623F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1289A72E-9507-4AC6-9B7B-F338777623F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

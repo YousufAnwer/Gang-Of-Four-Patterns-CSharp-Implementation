@@ -9,6 +9,7 @@
     <ProjectReference Include="..\GOF.AbstractFactory\GOF.AbstractFactory.csproj" />
     <ProjectReference Include="..\GOF.AdapterPatternSocket\GOF.AdapterPatternSocket.csproj" />
     <ProjectReference Include="..\GOF.AdapterPattern\GOF.AdapterPattern.csproj" />
+    <ProjectReference Include="..\GOF.BuilderPattern\GOF.BuilderPattern.csproj" />
     <ProjectReference Include="..\GOF.FactoryPattern\GOF.FactoryPattern.csproj" />
   </ItemGroup>
 

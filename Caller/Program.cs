@@ -5,6 +5,7 @@ using GOF.AdapterPatternSocket.Adapter;
 using GOF.AdapterPatternSocket.Charger;
 using GOF.AdapterPatternSocket.Devices;
 using GOF.AdapterPatternSocket.Sockets;
+using GOF.BuilderPattern;
 using GOF.FactoryPattern;
 using System;
 
@@ -17,7 +18,8 @@ namespace Caller
 			//TestFactory();
 			//TestAbstractfactory();
 			//TestAdapterPattern();
-			TestSocketAdapter();
+			//TestSocketAdapter();
+			TestBuilderPattern();	
 		}
 		private static void TestFactory()
 		{
@@ -61,17 +63,25 @@ namespace Caller
 		private static void TestSocketAdapter()
 		{
 			I3PinCharger threePinCharger = new ThreePinCharger();
-			I2PinCharger twoPinCharger = new TwoPinCharger();
-			
-			MacBookPro mac =new MacBookPro();
+			//I2PinCharger twoPinCharger = new TwoPinCharger();
+
+			MacBookPro mac = new MacBookPro();
 			mac.AttachCharger(threePinCharger);
 
 			IChargingAdapter adapter = new ChargingAdapter();
-			var twoPinCharger1=adapter.Addept(threePinCharger);
+			var twoPinCharger1 = adapter.Addept(threePinCharger);
 
 
-			Socket twoPinSocket=new Socket();
+			Socket twoPinSocket = new Socket();
 			twoPinSocket.PlugInCharger(twoPinCharger1);
+		}
+
+		private static void TestBuilderPattern()
+		{
+			IPCBuilder gamingPCBuilder = new GamingPCBuilder();
+			IPCBuilder normalPCBuilder = new NormalPCBuilder();	
+			PCFactory pCFactory=new PCFactory();
+			pCFactory.construct(gamingPCBuilder);
 		}
 	}
 }
